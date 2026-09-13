@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAF6ED] text-[#1E2229] font-sans antialiased selection:bg-[#6B4423] selection:text-white;
+  }
+}
+
+/* Custom Fitted Warm Cream Glassmorphism & Micro-Interactions */
+.glass-panel {
+  background: rgba(250, 246, 237, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 225, 211, 0.8);
+  box-shadow: 0 4px 20px rgba(50, 40, 30, 0.04);
+}
+
+.glass-panel-brand {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(107, 68, 35, 0.2);
+  box-shadow: 0 10px 30px rgba(107, 68, 35, 0.08);
+}
+
+.glass-card {
+  background: #FFFFFF;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 225, 211, 0.9);
+  box-shadow: 0 4px 16px rgba(50, 40, 30, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(107, 68, 35, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -5px rgba(50, 40, 30, 0.1), 0 0 20px 0 rgba(107, 68, 35, 0.1);
+}
+
+.brand-gradient-text {
+  background: linear-gradient(135deg, #1E2229 0%, #6B4423 50%, #A3586D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brown-gradient-text {
+  background: linear-gradient(135deg, #8C5A32 0%, #6B4423 50%, #4A2E1E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.teal-gradient-text {
+  background: linear-gradient(135deg, #1B3733 0%, #2C524D 50%, #E0934F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rose-gradient-text {
+  background: linear-gradient(135deg, #A3586D 0%, #E0934F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(107, 68, 35, 0.05) 20%,
+    rgba(107, 68, 35, 0.15) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2.5s infinite;
+  content: '';
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Custom Scrollbar for Warm Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CFBE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B4423;
+}
